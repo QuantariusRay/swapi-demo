@@ -36,7 +36,7 @@ import { LoadingComponent } from '../../components/loading/loading.component';
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 8px;
-      grid-auto-rows: 400px;
+      grid-auto-rows: 350px;
     }
   `],
   imports: [

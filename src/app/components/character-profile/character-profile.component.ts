@@ -8,23 +8,23 @@ import { WeightPipe } from '../../pipes/weight.pipe';
   selector: 'character-profile',
   standalone: true,
   template: `
-    <h2>{{ character.name }}</h2>
+    <h2 data-cy="character-name">{{ character.name }}</h2>
 
     <dl>
       <dt>Gender</dt>
-      <dd>{{ character.gender | titlecase }}</dd>
+      <dd data-cy="character-gender">{{ character.gender | titlecase }}</dd>
 
       <dt>Birth Year</dt>
-      <dd>{{ character.birth_year }}</dd>
+      <dd data-cy="birth-year">{{ character.birth_year }}</dd>
 
       <dt>Height</dt>
-      <dd>{{ character.height | height }}</dd>
+      <dd data-cy="character-height">{{ character.height | height }}</dd>
 
       <dt>Weight</dt>
-      <dd>{{ character.mass | weight }}</dd>
+      <dd data-cy="character-weight">{{ character.mass | weight }}</dd>
 
       <dt>Eye Color</dt>
-      <dd>{{ character.eye_color | titlecase }}</dd>
+      <dd data-cy="eye-color">{{ character.eye_color | titlecase }}</dd>
     </dl>
   `,
   imports: [

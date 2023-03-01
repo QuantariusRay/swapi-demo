@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ImgSrcPipe implements PipeTransform {
 
-  transform(characterName: string): string {
+  transform(characterName: string | null): string {
 
     if (!characterName) {
       return '/assets/images/default.png';

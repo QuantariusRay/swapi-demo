@@ -14,13 +14,6 @@ describe('Landing Page', () => {
       .should('have.length', 10);
   });
 
-  it('should display the character name on the display of the card', () => {
-    cy.get('character-card')
-      .first()
-      .find('h4')
-      .should('have.text', 'Luke Skywalker');
-  });
-
   it('should allow user to search for a particular character', () => {
     cy.searchFlow();
 

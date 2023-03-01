@@ -12,43 +12,40 @@ import { WeightPipe } from '../../pipes/weight.pipe';
   standalone: true,
   template: `
     <ng-container *ngIf="store.character$ | ngrxPush as character">
-        <div>
-          <div>
-            <img [src]="character.name | imgSrc" [alt]="character.name"/>
-            <h1>{{ character.name | titlecase}}</h1>
-          </div>
+      <div>
+        <img [src]="character.name | imgSrc" [alt]="character.name"/>
+        <h1>{{ character.name | titlecase}}</h1>
+      </div>
 
-          <h2>Biographical Information</h2>
-          <dl>
-            <dt>Homeworld</dt>
-            <dd>{{ character.homeworld | planetName }}</dd>
+      <h2>Biographical Information</h2>
+      <dl>
+        <dt>Homeworld</dt>
+        <dd>{{ character.homeworld | planetName }}</dd>
 
-            <dt>Birth Year</dt>
-            <dd>{{ character.birth_year }}</dd>
-          </dl>
+        <dt>Birth Year</dt>
+        <dd>{{ character.birth_year }}</dd>
+      </dl>
 
-          <h2>Physical description</h2>
-          <dl>
-            <dt>Gender</dt>
-            <dd>{{ character.gender | titlecase }}</dd>
+      <h2>Physical description</h2>
+      <dl>
+        <dt>Gender</dt>
+        <dd>{{ character.gender | titlecase }}</dd>
 
-            <dt>Height</dt>
-            <dd>{{ character.height | height  }}</dd>
+        <dt>Height</dt>
+        <dd>{{ character.height | height  }}</dd>
 
-            <dt>Weight</dt>
-            <dd>{{ character.mass | weight }}</dd>
+        <dt>Weight</dt>
+        <dd>{{ character.mass | weight }}</dd>
 
-            <dt>Hair Color</dt>
-            <dd>{{ character.hair_color | titlecase }}</dd>
+        <dt>Hair Color</dt>
+        <dd>{{ character.hair_color | titlecase }}</dd>
 
-            <dt>Eye Color</dt>
-            <dd>{{ character.eye_color | titlecase }}</dd>
+        <dt>Eye Color</dt>
+        <dd>{{ character.eye_color | titlecase }}</dd>
 
-            <dt>Skin Color</dt>
-            <dd>{{ character.eye_color | titlecase }}</dd>
-          </dl>
-          <h2>Films</h2>
-        </div>
+        <dt>Skin Color</dt>
+        <dd>{{ character.eye_color | titlecase }}</dd>
+      </dl>
     </ng-container>
   `,
   styles: [`
